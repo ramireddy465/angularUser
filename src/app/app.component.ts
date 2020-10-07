@@ -7,28 +7,28 @@ import gql from 'graphql-tag';
 
 
 
-interface todo {
-  uuid:string;
-  name:string;
-  age:number;
-  mobile:string
-}
+// interface todo {
+//   uuid:string;
+//   name:string;
+//   age:number;
+//   mobile:string
+// }
 
-interface Response{
-  todo:todo[]
-}
+// interface Response{
+//   todo:todo[]
+// }
 
-const GET_DOGS = gql`
-query MyQuery {
-  todo {
-    age
-    id
-    mobile
-    name
-  }
-}
+// const GET_DOGS = gql`
+// query MyQuery {
+//   todo {
+//     age
+//     id
+//     mobile
+//     name
+//   }
+// }
 
-`;
+// `;
  
 
 
@@ -72,14 +72,14 @@ export class AppComponent implements OnInit {
 
 
 
-   this.queryRef = this.apollo
-   .watchQuery<Response>({
-     query: GET_DOGS,
-   })
-   // this.todo = 
-   this.todo = this.queryRef.valueChanges.pipe(map(result => result.data.todo));
+  //  this.queryRef = this.apollo
+  //  .watchQuery<Response>({
+  //    query: GET_DOGS,
+  //  })
+  //  // this.todo = 
+  //  this.todo = this.queryRef.valueChanges.pipe(map(result => result.data.todo));
 
-    console.log(this.todo)
+  //   console.log(this.todo)
 
   }
 

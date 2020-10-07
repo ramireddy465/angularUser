@@ -5,7 +5,7 @@ import { NewComponentComponent } from './components/new-component/new-component.
 
 const routes: Routes = [
   {path:'', component:AppComponent},
-  {path:'signin', component:NewComponentComponent}
+ 
 ];
 
 @NgModule({
